@@ -4,8 +4,6 @@ let resultBox = document.getElementById('result-box')
 let dataStore = []
 
 var gimme = document.getElementById('input-box')
-const pokemon = ''
-
 
 
 // CAPITALIZE FIRST LETTER
@@ -15,10 +13,6 @@ function capitalize(word) {
 
 fetchData()
 
-// document.getElementById('submit').addEventListener('click', function () {
-//     // Add a class to the button when it is clicked
-//     resultBox.classList.add('active')
-// });
 
 document.addEventListener('keyup', function(event) {
     if (event.key === 'Enter') {
@@ -26,19 +20,13 @@ document.addEventListener('keyup', function(event) {
     }
 });
 
-// document.getElementById('search-box').addEventListener('mouseleave', function(e) {
-//     e.addEventListener('click', function(event) {
-//         searchResult.innerHTML = ''
-//     })
-// })
-
 {
+    // Hides search results when mouse leaves the search bar and clicks outside
 let sequence = 0
 let searchBox = document.getElementById('search-box')
 searchBox.addEventListener('mouseleave', function() {
     if (sequence === 0) {
         console.log('mouseleave event');
-        searchResult.innerHTML = ''
         sequence = 1;
     }
 });
