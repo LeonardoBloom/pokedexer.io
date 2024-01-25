@@ -28,17 +28,16 @@ searchBox.addEventListener('mouseleave', function() {
     if (sequence === 0) {
         console.log('mouseleave event');
         sequence = 1;
+        document.addEventListener('click', function() {
+            if (sequence === 1) {
+                console.log('click event');
+                searchResult.innerHTML = ''
+                // Reset the sequence for future events
+                sequence = 0;
+            }
+        })
     }
-});
-
-searchBox.addEventListener('click', function() {
-    if (sequence === 1) {
-        console.log('click event');
-        searchResult.innerHTML = ''
-        // Reset the sequence for future events
-        sequence = 0;
-    }
-});
+})
 }
 
 
